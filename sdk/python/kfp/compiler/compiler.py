@@ -674,6 +674,7 @@ class Compiler(object):
         'templates': templates,
         'arguments': {'parameters': input_params},
         'serviceAccountName': 'pipeline-runner',
+        'securityContext': {'fsGroup': 65534},
       }
     }
     # set parallelism limits at pipeline level
